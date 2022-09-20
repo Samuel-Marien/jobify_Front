@@ -6,8 +6,11 @@ export default {
   extends: ['eslint:recommended', 'plugin:react/recommended'],
   overrides: [],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   plugins: ['react'],
   rules: { semi: ['error', 'always'], quotes: ['error', 'double'] }
