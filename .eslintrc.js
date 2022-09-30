@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   env: {
     browser: true,
     es2021: true
@@ -6,12 +6,9 @@ export default {
   extends: ['eslint:recommended', 'plugin:react/recommended'],
   overrides: [],
   parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
+    ecmaVersion: 'latest',
+    sourceType: 'module'
   },
-  plugins: ['react'],
-  rules: { semi: ['error', 'always'], quotes: ['error', 'double'] }
+  plugins: [],
+  rules: {}
 }

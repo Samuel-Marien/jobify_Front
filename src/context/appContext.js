@@ -1,4 +1,5 @@
 import React, { useReducer, useContext } from 'react'
+import PropTypes from 'prop-types'
 import reducer from './reducer'
 import { DISPLAY_ALERT, CLEAR_ALERT } from './actions'
 
@@ -6,7 +7,7 @@ const initialState = {
   isLoading: false,
   showAlert: false,
   alertText: '',
-  alertType: '',
+  alertType: ''
 }
 
 const AppContext = React.createContext()
@@ -22,7 +23,7 @@ const AppProvider = ({ children }) => {
   const clearAlert = () => {
     setTimeout(() => {
       dispatch({
-        type: CLEAR_ALERT,
+        type: CLEAR_ALERT
       })
     }, 3000)
   }
@@ -32,6 +33,10 @@ const AppProvider = ({ children }) => {
       {children}
     </AppContext.Provider>
   )
+}
+
+AppProvider.propTypes = {
+  children: PropTypes.node
 }
 
 const useAppContext = () => {

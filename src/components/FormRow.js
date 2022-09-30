@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const FormRow = ({ type, name, value, onChange, labelText }) => {
   return (
@@ -15,6 +16,14 @@ const FormRow = ({ type, name, value, onChange, labelText }) => {
       />
     </div>
   )
+}
+
+FormRow.propTypes = {
+  type: PropTypes.string,
+  name: PropTypes.string,
+  value: PropTypes.any,
+  onChange: PropTypes.func,
+  labelText: PropTypes.string
 }
 
 export default FormRow

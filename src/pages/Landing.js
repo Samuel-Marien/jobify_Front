@@ -17,10 +17,11 @@ const Landing = () => {
             job <span>tracking</span> job
           </h1>
           <p>
-            I'm baby dSA vibecession street art big mood succulents, kinfolk
-            gatekeep gentrify 8-bit church-key semiotics man braid. Meditation
-            godard vegan disrupt photo booth actually small batch. Viral jean
-            shorts sus hashtag, try-hard farm-to-table literally narwhal.
+            I&apos;m baby dSA vibecession street art big mood succulents,
+            kinfolk gatekeep gentrify 8-bit church-key semiotics man braid.
+            Meditation godard vegan disrupt photo booth actually small batch.
+            Viral jean shorts sus hashtag, try-hard farm-to-table literally
+            narwhal.
           </p>
           <button className="btn btn-hero">Login/Register</button>
         </div>
