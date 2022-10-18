@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Logo from '../components/Logo'
 
@@ -23,7 +24,10 @@ const Landing = () => {
             Viral jean shorts sus hashtag, try-hard farm-to-table literally
             narwhal.
           </p>
-          <button className="btn btn-hero">Login/Register</button>
+
+          <Link className="btn btn-hero" to="/register">
+            Login/Register
+          </Link>
         </div>
         <img src={main} alt="job hunt" className="img main-img" />
       </div>
