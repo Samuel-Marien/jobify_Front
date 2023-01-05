@@ -26,7 +26,8 @@ import {
   EDIT_JOB_ERROR,
   SHOW_STATS_BEGIN,
   SHOW_STATS_SUCCESS,
-  CLEAR_FILTERS
+  CLEAR_FILTERS,
+  CHANGE_PAGE
 } from './actions'
 
 import { initialState } from './appContext'
@@ -154,7 +155,8 @@ const reducer = (state, action) => {
   if (action.type === HANDLE_CHANGE) {
     return {
       ...state,
-      [action.payload.name]: action.payload.value
+      [action.payload.name]: action.payload.value,
+      page: 1
     }
   }
 
@@ -283,6 +285,13 @@ const reducer = (state, action) => {
       searchStatus: 'all',
       searchType: 'all',
       sort: 'latest'
+    }
+  }
+
+  if (action.type === CHANGE_PAGE) {
+    return {
+      ...state,
+      page: action.payload.page
     }
   }
 
