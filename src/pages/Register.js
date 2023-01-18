@@ -4,16 +4,12 @@ import Wrapper from '../assets/wrappers/RegisterPage'
 import { useAppContext } from '../context/appContext'
 import { useNavigate } from 'react-router-dom'
 
-// global context and useNavigate later
-
 const initialState = {
   name: '',
   email: '',
   password: '',
   isMember: true
 }
-// if possible prefer local state
-// global state
 
 const Register = () => {
   const navigate = useNavigate()
@@ -23,9 +19,7 @@ const Register = () => {
     useAppContext()
 
   const handleChange = (e) => {
-    // console.log(e.target)
     setValues({ ...values, [e.target.name]: e.target.value })
-    // console.log(values)
   }
 
   const onSubmit = (e) => {
@@ -43,8 +37,6 @@ const Register = () => {
     } else {
       registerUser(currentUser)
     }
-
-    console.log(values)
   }
 
   const toggleMember = () => {
